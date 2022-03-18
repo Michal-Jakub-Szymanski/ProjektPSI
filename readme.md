@@ -1,3 +1,3 @@
 **Vps:**
-Username: root \n
+Username: root
 Password: oracleserver
