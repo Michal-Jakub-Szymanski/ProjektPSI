@@ -1,0 +1,28 @@
+:root{
+    --text-size: 1rem;
+    --text-font: "Arial, Helvetica, sans-serif";
+    --text-gap: 0.5rem;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    width: 100rem;
+    height: 100rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--text-font);
+    font-size: var(--text-size);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--text-gap);
+}
