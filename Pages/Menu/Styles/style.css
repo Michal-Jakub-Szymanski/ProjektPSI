@@ -1,7 +1,9 @@
 :root{
-    --text-size: 1rem;
-    --text-font: "Arial, Helvetica, sans-serif";
+    --main-text-size: 1rem;
+    --secondary-text-size: 0.85rem;
+    --text-font: "Roboto";
     --text-gap: 0.5rem;
+    --border-color: gray;
 }
 
 body{
@@ -9,6 +11,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 .main{
     width: 100rem;
@@ -17,7 +20,7 @@ body{
     flex-direction: column;
     align-items: center;
     font-family: var(--text-font);
-    font-size: var(--text-size);
+    padding: calc(var(--main-text-size) * 1.5);
 }
 
 .header{
@@ -25,4 +28,32 @@ body{
     flex-direction: column;
     align-items: center;
     gap: var(--text-gap);
+}
+
+.MainText{
+    font-size: var(--main-text-size);
+    font-weight: bold;
+}
+
+.SecondaryText{
+    font-size: var(--secondary-text-size);
+}
+
+.MenuTable{
+    margin: 1.5rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+.Pizzas{
+    display: flex;
+}
+.PizzaInfo{
+    margin: 0.85rem;
+}
+
+.PizzasInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
