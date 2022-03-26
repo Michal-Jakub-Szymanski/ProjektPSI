@@ -1,21 +1,112 @@
 :root{
     --main-text-size: 1rem;
     --secondary-text-size: 0.85rem;
+
+
+    --bg-color: rgb(61, 61, 61);
+    --text-color: rgb(255, 255, 255);
+
+
+    --even-bg-color: rgba(107, 107, 107, 0.3);
+    --even-text-color: rgba(0, 0, 0, 1);
+
+
+    --odd-bg-color: rgb(255, 255, 255);
+    --odd-text-color: rgb(0,0,0);
+
+
     --text-font: "Roboto";
     --text-gap: 0.5rem;
+
+
     --border-color: gray;
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow: auto;
+    
 }
+
+header nav{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_title{
+    display: flex;
+}
+.nav_title img{
+    width: auto;
+    height: 5rem;
+    padding: 0 1rem;
+}
+.nav_title p{
+    font-size: calc(var(--main-text-size)*1.75);
+    font-weight: bold;
+    margin: auto 0;
+}
+.nav_links ul{
+    display: flex;
+    padding: 0;
+}
+.nav_links li{
+    list-style: none;
+}
+
+.nav_links a{
+    zoom: 1;
+    display: inline-block;
+    padding: 1rem;
+}
+.nav_links li:hover{
+    animation: bg-zoom 250ms linear both;
+}
+
+@keyframes bg-zoom {
+    0%{        
+        background-color: transparent;
+    }
+    100%{
+        background-color: aqua;
+    }
+}
+.nav_links li a{
+    text-decoration: none;
+    font-size: calc(var(--main-text-size)*1.5);
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.nav_title .nav_logo:hover{
+    animation: spin 7.5s infinite linear;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg) scale(1);
+
+    }
+    50%{
+        transform: rotate(180deg) scale(0.5);
+    }
+    100%{
+        transform: rotate(360deg) scale(1);
+    }
+}
+@media (max-width: 550px){
+    nav{
+        flex-direction: column;
+    }
+}
+
+
+
 .main{
-    width: 100rem;
-    height: 100rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,9 +135,16 @@ body{
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
+    width: 50%;
+    animation: Appear 1.2s 0.2s both;
+}
+@keyframes Appear {
+    100%{
+        opacity: 1;
+    }
 }
 .Pizzas{
-    display: flex;
+    width: 100%;
 }
 .PizzaInfo{
     margin: 0.85rem;
@@ -55,5 +153,36 @@ body{
 .PizzasInfo{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+}
+
+.PizzaContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.PizzaContainer:nth-of-type(even){
+    background-color: var(--even-bg-color);
+    color: var(--even-text-color);
+}
+
+
+.PizzaContainer:nth-of-type(odd){
+    background-color: var(--odd-bg-color);
+    color: var(--odd-text-color);
+    
+}
+
+.PriceInfo{
+    display: flex;
+    align-items: flex-end;
+    margin: 0.85rem;
+}
+
+.PricesContainer{
+    display: flex;
+    flex-direction: column;
+    
 }
