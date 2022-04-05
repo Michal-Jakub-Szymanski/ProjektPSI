@@ -3,11 +3,12 @@
     --secondary-text-size: 0.85rem;
 
 
-    --bg-color: rgb(61, 61, 61);
+    --nav-bg-color: rgb(61, 61, 61);
+    --bg-color: #535353;
     --text-color: rgb(255, 255, 255);
 
 
-    --even-bg-color: rgba(107, 107, 107, 0.3);
+    --even-bg-color: rgb(133, 130, 130);
     --even-text-color: rgba(0, 0, 0, 1);
 
 
@@ -19,7 +20,7 @@
     --text-gap: 0.5rem;
 
 
-    --border-color: gray;
+    --border-color: #b3b3b3
 }
 
 body{
@@ -27,15 +28,19 @@ body{
     margin: 0;
     scroll-behavior: smooth;
     overflow: auto;
-    
 }
-
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 header nav{
-    background-color: var(--bg-color);
+    background-color: var(--nav-bg-color);
     color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 .nav_title{
     display: flex;
@@ -56,26 +61,21 @@ header nav{
 }
 .nav_links li{
     list-style: none;
+    transition: background-color 0.4s ease;
 }
-
-.nav_links a{
+.nav_links li:hover{
+    background-color: rgba(252,201,135,255);
+}
+header .nav_links a{
     zoom: 1;
     display: inline-block;
     padding: 1rem;
-}
-.nav_links li:hover{
-    animation: bg-zoom 250ms linear both;
+    
 }
 
-@keyframes bg-zoom {
-    0%{        
-        background-color: transparent;
-    }
-    100%{
-        background-color: aqua;
-    }
-}
-.nav_links li a{
+
+
+header .nav_links li a{
     text-decoration: none;
     font-size: calc(var(--main-text-size)*1.5);
     color: var(--text-color);
@@ -98,10 +98,60 @@ header nav{
         transform: rotate(360deg) scale(1);
     }
 }
-@media (max-width: 550px){
+
+
+footer nav{
+    background-color: var(--nav-bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+footer .nav_links{
+    background-color: var(--nav-bg-color);
+    color: var(--text-color);
+    font-size: calc(var(--main-text-size)*1);
+}
+
+footer .nav_links ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 5%;
+}
+footer .nav_links li{
+    list-style: none;
+    padding: 0.5rem;
+    transition: all 0.2;
+    background-color: transparent;
+    transition: background-color 0.4s ease;
+}
+footer .nav_links li:hover{
+    background-color: rgba(252,201,135,255);
+}
+footer .nav_links li a{
+    text-decoration: none;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+footer .nav_contact{
+    margin-right: 5%;
+    text-align: center;
+}
+
+@media (max-width: 620px){
     nav{
         flex-direction: column;
     }
+    footer nav{
+        text-align: center;
+    }
+    footer .nav_contact{
+        margin-right: 0;
+    }
+    
 }
 
 
@@ -112,6 +162,14 @@ header nav{
     align-items: center;
     font-family: var(--text-font);
     padding: calc(var(--main-text-size) * 1.5);
+    color: var(--text-color);
+    background-color: gray;
+    background-image: url(../../../Styles/PizzaBg.jpg);
+    background-size: cover;
+    vertical-align: top;
+    background-position: center center;
+    transition: all 0.5s ease-in-out;
+    
 }
 
 .header{
@@ -119,6 +177,12 @@ header nav{
     flex-direction: column;
     align-items: center;
     gap: var(--text-gap);
+    transform: scale(1.2);
+    
+}
+
+.header > :first-child{
+    transform: scale(1.5);
 }
 
 .MainText{
@@ -132,15 +196,23 @@ header nav{
 
 .MenuTable{
     margin: 1.5rem;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     display: flex;
     flex-direction: column;
     width: 50%;
     animation: Appear 1.2s 0.2s both;
+    
+}
+.section{
+    animation: Appear 1.2s 0.2s both;
 }
 @keyframes Appear {
+    0%{
+        transform: scale(0) translateX(-100%);
+    }
     100%{
         opacity: 1;
+        transform: scale(1) translateX(0%);
     }
 }
 .Pizzas{
@@ -161,6 +233,26 @@ header nav{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    transition: all 0.2s
+}
+
+.PizzaContainer:hover{
+   transform: scale(1.1); 
+   box-shadow: 8px 8px 24px 10px rgb(55, 55, 59);
+
+}
+@media (max-width: 620px) {
+    .PizzaContainer{
+        display: block;
+    }
+    .PizzaContainer:hover{
+        transform: scale(1);
+    }
+    .main{
+        background-image: none;
+        background-color:var(--bg-color);
+    }
+    
 }
 
 .PizzaContainer:nth-of-type(even){

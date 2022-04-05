@@ -8,12 +8,19 @@ body{
     box-sizing: border-box;
     margin: 0;
 }
+/*navbar*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 header nav{
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 .nav_title{
     display: flex;
@@ -26,6 +33,7 @@ header nav{
 .nav_title p{
     font-size: calc(var(--text-size)*1.75);
     font-weight: bold;
+    margin: auto 0;
 }
 .nav_links ul{
     display: flex;
@@ -33,20 +41,104 @@ header nav{
 }
 .nav_links li{
     list-style: none;
+}
+
+header .nav_links a{
+    zoom: 1;
+    display: inline-block;
     padding: 1rem;
 }
 .nav_links li:hover{
-    background-color: aqua;
+    animation: bg-zoom 250ms linear both;
 }
-.nav_links li a{
+
+@keyframes bg-zoom {
+    0%{        
+        background-color: transparent;
+    }
+    100%{
+        background-color: aqua;
+    }
+}
+header .nav_links li a{
     text-decoration: none;
     font-size: calc(var(--text-size)*1.5);
     color: var(--text-color);
     white-space: nowrap;
 }
 
-@media (max-width: 550px){
+.nav_title .nav_logo:hover{
+    animation: spin 7.5s infinite linear;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg) scale(1);
+
+    }
+    50%{
+        transform: rotate(180deg) scale(0.5);
+    }
+    100%{
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
+
+main{
+    border: 1px solid black;
+    margin: 10px;
+    width: 100%-20px;
+    height: 50rem;
+}
+
+footer nav{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+footer .nav_links{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: calc(var(--text-size)*1);
+}
+
+footer .nav_links ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 5%;
+}
+footer .nav_links li{
+    list-style: none;
+    padding: 0.5rem;
+}
+footer .nav_links li:hover{
+    background-color: aqua;
+}
+footer .nav_links li a{
+    text-decoration: none;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+footer .nav_contact{
+    margin-right: 5%;
+    text-align: center;
+}
+
+@media (max-width: 620px){
     nav{
         flex-direction: column;
+    }
+    footer nav{
+        text-align: center;
+    }    
+    footer .nav_contact{
+        margin-right: 0;
     }
 }
