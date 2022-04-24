@@ -72,9 +72,6 @@ header .nav_links a{
     padding: 1rem;
     
 }
-
-
-
 header .nav_links li a{
     text-decoration: none;
     font-size: calc(var(--main-text-size)*1.5);
@@ -252,7 +249,9 @@ footer .nav_contact{
         background-image: none;
         background-color:var(--bg-color);
     }
-    
+    .MenuTable{
+        width: 90%;
+    }
 }
 
 .PizzaContainer:nth-of-type(even){

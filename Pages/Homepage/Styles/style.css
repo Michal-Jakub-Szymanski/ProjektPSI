@@ -57,7 +57,7 @@ header .nav_links a{
         background-color: transparent;
     }
     100%{
-        background-color: aqua;
+        background-color: rgba(252,201,135,255);
     }
 }
 header .nav_links li a{
@@ -87,10 +87,10 @@ header .nav_links li a{
 
 
 main{
-    border: 1px solid black;
-    margin: 10px;
-    width: 100%-20px;
     height: 50rem;
+    background-color: gray;
+    background-image: url(../../../Styles/PizzaBg.jpg);
+    background-size: cover;
 }
 
 footer nav{
@@ -118,9 +118,7 @@ footer .nav_links li{
     list-style: none;
     padding: 0.5rem;
 }
-footer .nav_links li:hover{
-    background-color: aqua;
-}
+
 footer .nav_links li a{
     text-decoration: none;
     color: var(--text-color);
