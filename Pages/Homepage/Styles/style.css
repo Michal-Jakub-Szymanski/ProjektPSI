@@ -90,12 +90,97 @@ header .nav_links li a{
 
 
 main{
-    height: 50rem;
+    height: 50rem;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    font-family: var(--text-font);
+    padding: calc(var(--main-text-size) * 1.5);
+    color: var(--text-color);
     background-color: gray;
     background-image: url(../../../Styles/Pizza.jpg);
     background-size: cover;
+    vertical-align: top;
+    background-position: center center;
+    transition: all 0.5s ease-in-out;
 }
 
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 75%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.content_left{
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    justify-content:center;
+    align-items: center;
+    margin: 2px;
+}
+
+.content_left img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 20px;
+    
+}
+
+.content_right{
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50%;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 2px;
+}
+
+.content_inner{
+    text-align: center;
+    font-size: calc(var(--text-size) * 1.75);
+    color: black;
+    padding: 2px;
+    line-height: calc(var(--text-size) * 2);
+}
+
+.content_inner h1 {
+    margin: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px){
+    .wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content_left, .content_right{
+        margin: 5px;
+        max-width: 400px;
+    }
+}
 footer nav{
     background-color: var(--bg-color);
     color: var(--text-color);
