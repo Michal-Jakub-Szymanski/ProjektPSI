@@ -202,6 +202,7 @@ footer .nav_contact{
 .section{
     color: rgb(0,0,0);
     animation: Appear 1.2s 0.2s both;
+    font-size: calc(var(--main-text-size)*1.5);
 }
 @keyframes Appear {
     0%{
