@@ -97,7 +97,7 @@ main{
     flex-direction: column;
     align-items: center;
     font-family: var(--text-font);
-    padding: calc(var(--main-text-size) * 1.5);
+    padding: calc(var(--main-text-size) * 1);
     color: var(--text-color);
     font-size: var(--main-text-size);
     background-image: url(../../../Styles/pizza.jpg);
@@ -111,7 +111,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: scale(3);
+    transform: scale(2);
     font-weight: bold;
     padding-top: calc(var(--main-text-size) * 1.2);
     padding-bottom: calc(var(--main-text-size) * 1.5);
@@ -130,11 +130,11 @@ main{
     width:45%;
     margin-left: 5%;
     vertical-align: left;
-    font-size: calc(var(--main-text-size)*1.2);
+    font-size: var(--main-text-size);
 }
 
 .contact .left span{
-    font-size: calc(var(--main-text-size)*2);
+    font-size: calc(var(--main-text-size)*1.5);
 }
 
 .contact .right{
@@ -144,24 +144,24 @@ main{
 }
 
 .contact .right a{
-    font-size: calc(var(--main-text-size)*1.5);
+    font-size: var(--main-text-size);
     white-space: nowrap;
 }
 
 .tel{
-    margin-top: calc(var(--main-text-size) * 1.5);
-    padding: calc(var(--main-text-size) * 1.5);
+    margin-top: var(--main-text-size);
+    padding: var(--main-text-size);
     text-align: center;
-    font-size: calc(var(--main-text-size)*1.5);
+    font-size: var(--main-text-size);
     background-color: var(--bg-color);
 }
 
 .godziny{
-    margin-bottom: calc(var(--main-text-size) * 1.5);
+    margin-bottom: var(--main-text-size);
 }
 table{
     width: 100%;
-    font-size: calc(var(--main-text-size)*1.5);
+    font-size: var(--main-text-size);
 }
 td, th{
     border: 1px solid #dddddd;
@@ -218,12 +218,6 @@ footer .nav_contact{
     }    
     footer .nav_contact{
         margin-right: 0;
-    }
-    table, .contact .left, .contact .right a, .icon{
-        font-size: var(--main-text-size);
-    }
-    .contact .left span{
-        font-size: calc(var(--main-text-size)*1.5);
     }
     .mapa{
         width: 400px;

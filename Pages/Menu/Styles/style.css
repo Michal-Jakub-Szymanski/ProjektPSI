@@ -244,10 +244,6 @@ footer .nav_contact{
     .PizzaContainer:hover{
         transform: scale(1);
     }
-    .main{
-        background-image: none;
-        background-color:var(--bg-color);
-    }
     .MenuTable{
         width: 90%;
     }
