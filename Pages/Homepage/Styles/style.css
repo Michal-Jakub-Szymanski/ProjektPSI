@@ -12,6 +12,7 @@ a{
 body{
     box-sizing: border-box;
     margin: 0;
+    cursor: url('../../../styles/cursor.png'), auto;
 }
 /*navbar*/
 header{
