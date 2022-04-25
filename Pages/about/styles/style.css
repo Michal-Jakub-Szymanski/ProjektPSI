@@ -1,0 +1,225 @@
+:root{
+    --bg-color: rgb(61, 61, 61);
+    --text-color: rgb(255, 255, 255);
+    --main-text-size: 1rem;
+    --text-font: "Roboto, Arial, Helvetica, sans-serif";
+    --text-gap: 0.5rem;
+}
+.icon{
+    font-size: calc(var(--main-text-size)*2);
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+/*navbar*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+header nav{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.nav_title{
+    display: flex;
+}
+.nav_title img{
+    width: auto;
+    height: 5rem;
+    padding: 0 1rem;
+}
+.nav_title p{
+    font-size: calc(var(--main-text-size)*1.75);
+    font-weight: bold;
+    margin: auto 0;
+}
+.nav_links ul{
+    display: flex;
+    padding: 0;
+}
+.nav_links li{
+    list-style: none;
+}
+
+header .nav_links a{
+    zoom: 1;
+    display: inline-block;
+    padding: 1rem;
+}
+.nav_links li:hover{
+    animation: bg-zoom 250ms linear both;
+}
+
+@keyframes bg-zoom {
+    0%{        
+        background-color: transparent;
+    }
+    100%{
+        background-color: rgba(252,201,135,255);
+    }
+}
+header .nav_links li a{
+    text-decoration: none;
+    font-size: calc(var(--main-text-size)*1.5);
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.nav_title .nav_logo:hover{
+    animation: spin 7.5s infinite linear;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg) scale(1);
+
+    }
+    50%{
+        transform: rotate(180deg) scale(0.5);
+    }
+    100%{
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--text-font);
+    padding: calc(var(--main-text-size) * 1.5);
+    color: var(--text-color);
+    background-color: gray;
+    background-image: url(../../../Styles/pizza.jpg);
+    background-size: cover;
+    font-size: var(--main-text-size);
+}
+
+.header{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(2);
+    font-weight: bold;
+}
+.contact{
+    padding-top: calc(var(--main-text-size) * 1.5);
+    width: 100%;
+}
+.contact .left{
+    float:left;
+    width:45%;
+    margin-left: 5%;
+    vertical-align: left;
+    font-size: calc(var(--main-text-size)*1.2);
+}
+
+.contact .left span{
+    font-size: calc(var(--main-text-size)*2);
+}
+
+.contact .right{
+    float:left;
+    width:35%;
+    margin-left: 15%;
+}
+
+.contact .right a{
+    text-decoration: none;
+    font-size: calc(var(--main-text-size)*1.5);
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.tel{
+    margin-top: calc(var(--main-text-size) * 1.5);
+    padding: calc(var(--main-text-size) * 1.5);
+    text-align: center;
+    font-size: calc(var(--main-text-size)*1.5);
+    background-color: var(--bg-color);
+}
+.godziny{
+    margin-bottom: calc(var(--main-text-size) * 1.5);
+}
+table{
+    width: 100%;
+    font-size: calc(var(--main-text-size)*1.5);
+}
+td, th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1rem;
+}
+tr{
+    background-color: var(--bg-color);
+}
+.mapa{
+    width: 600px;
+    height: 450px;
+}
+footer nav{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+footer .nav_links{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: calc(var(--main-text-size)*1);
+}
+
+footer .nav_links ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 5%;
+}
+footer .nav_links li{
+    list-style: none;
+    padding: 0.5rem;
+}
+
+footer .nav_links li a{
+    text-decoration: none;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+footer .nav_contact{
+    margin-right: 5%;
+    text-align: center;
+}
+
+@media (max-width: 620px){
+    nav{
+        flex-direction: column;
+    }
+    footer nav{
+        text-align: center;
+    }    
+    footer .nav_contact{
+        margin-right: 0;
+    }
+    table, .contact .left, .contact .right a, .icon{
+        font-size: var(--main-text-size);
+    }
+    .contact .left span{
+        font-size: calc(var(--main-text-size)*1.5);
+    }
+    .mapa{
+        width: 400px;
+        height: 300px;
+    }
+}

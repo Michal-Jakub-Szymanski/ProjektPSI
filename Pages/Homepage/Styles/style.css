@@ -2,7 +2,7 @@
     --bg-color: rgb(61, 61, 61);
     --text-color: rgb(255, 255, 255);
     --text-size: 1rem;
-    --text-font: "Arial, Helvetica, sans-serif";
+    --text-font: "Roboto, Arial, Helvetica, sans-serif";
 }
 body{
     box-sizing: border-box;
@@ -89,7 +89,7 @@ header .nav_links li a{
 main{
     height: 50rem;
     background-color: gray;
-    background-image: url(../../../Styles/PizzaBg.jpg);
+    background-image: url(../../../Styles/Pizza.jpg);
     background-size: cover;
 }
 

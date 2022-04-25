@@ -16,7 +16,7 @@
     --odd-text-color: rgb(0,0,0);
 
 
-    --text-font: "Roboto";
+    --text-font: "Roboto, Arial, Helvetica, sans-serif";
     --text-gap: 0.5rem;
 
 
@@ -161,21 +161,20 @@ footer .nav_contact{
     padding: calc(var(--main-text-size) * 1.5);
     color: var(--text-color);
     background-color: gray;
-    background-image: url(../../../Styles/PizzaBg.jpg);
+    background-image: url(../../../Styles/PizzaBg2.jpg);
     background-size: cover;
     vertical-align: top;
     background-position: center center;
     transition: all 0.5s ease-in-out;
-    
 }
 
 .header{
+    color: rgb(0,0,0);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--text-gap);
     transform: scale(1.2);
-    
 }
 
 .header > :first-child{
@@ -201,6 +200,7 @@ footer .nav_contact{
     
 }
 .section{
+    color: rgb(0,0,0);
     animation: Appear 1.2s 0.2s both;
 }
 @keyframes Appear {
